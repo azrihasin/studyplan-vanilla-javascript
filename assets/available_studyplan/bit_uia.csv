@@ -1,0 +1,54 @@
+sem_id,sem_name,course_id,course,course_code,credit_hour,taken
+521fb130-8bd7-45f2-8757-d7777387ce6a,Year 1 Sem 1,ed3822f9-cbea-44a3-9aad-5adca1855353,Elements of Programming,CSC 1100,3,false
+521fb130-8bd7-45f2-8757-d7777387ce6a,Year 1 Sem 1,81937238-32c0-4d77-b940-e75f71bb73f6,Database Systems,INFO 1103 ,3,false
+521fb130-8bd7-45f2-8757-d7777387ce6a,Year 1 Sem 1,91e83482-a349-48c3-ae11-1b180fce7b9d,Mathematics for Computing I ,CSC 1707 ,3,false
+521fb130-8bd7-45f2-8757-d7777387ce6a,Year 1 Sem 1,20da1094-d45e-4a07-ad3b-e4905f3f866d,Business Fundamental ,INFO 1501 ,3,false
+521fb130-8bd7-45f2-8757-d7777387ce6a,Year 1 Sem 1,b3c8c6dd-2017-4440-8ab1-de8018a3f8a4,Tamadun Islam & Tamadun Asia Tenggara,MPU 3122,2,false
+521fb130-8bd7-45f2-8757-d7777387ce6a,Year 1 Sem 1,ce69984a-b784-432a-bca9-a2a4b326dc29,Creative Thinking and Problem Solving,UNGS 2011 ,2,false
+521fb130-8bd7-45f2-8757-d7777387ce6a,Year 1 Sem 1,f70a030c-c9fb-44a1-ac20-6991d08ab4e1,Tilawah Al-Quran I ,TQ 1001 ,0.5,false
+521fb130-8bd7-45f2-8757-d7777387ce6a,Year 1 Sem 1,e7c25935-2da8-4c9a-940d-868d5de52edb,USRAH 1 ,CCCD 1611 ,0.5,false
+38a2171e-7529-4f0b-ab26-e23be9e99f8e,Year 1 Sem 2,1b82ca4b-84f5-4bc1-a4d6-210f0be38c2e,Probability & Statistics ,CSC 1706 ,3,false
+38a2171e-7529-4f0b-ab26-e23be9e99f8e,Year 1 Sem 2,03dd45c0-8914-418f-b4d5-4e0a757c0393,Introduction to Software Engineering,CSC 1501 ,3,false
+38a2171e-7529-4f0b-ab26-e23be9e99f8e,Year 1 Sem 2,cba0bbb1-17ca-49bc-bdc1-84dbc1454a83,Object Oriented Programming ,CSC 1103,3,false
+38a2171e-7529-4f0b-ab26-e23be9e99f8e,Year 1 Sem 2,4e03e8f6-d1bf-403e-9f2a-838a10409256,Introduction to Computer Organization,CSC 1401 ,3,false
+38a2171e-7529-4f0b-ab26-e23be9e99f8e,Year 1 Sem 2,058a38e8-43f8-45ce-9d6b-8843c71d9adf,Bahasa Melayu Sains & Teknologi,LM 2026,2,false
+38a2171e-7529-4f0b-ab26-e23be9e99f8e,Year 1 Sem 2,492cd32d-9020-42f6-9427-4bcf8e65a040,Hubungan Etnik,MPU 3112,2,false
+38a2171e-7529-4f0b-ab26-e23be9e99f8e,Year 1 Sem 2,758e39c0-2c33-4a5b-ab89-d2b01e27ecfa,Tilawah Al-Quran 2 ,TQ 2001 ,0.5,false
+38a2171e-7529-4f0b-ab26-e23be9e99f8e,Year 1 Sem 2,105cd21f-6277-4ea9-adf6-00de46b58277,USRAH 2 ,CCCD 1612 ,0.5,false
+76ffac30-6f36-4752-9f97-75d62282d276,Year 2 Sem 1,44e93fa1-000b-4f38-90c2-33abc9a3657d,Web Technologies,INFO 2302,3,false
+76ffac30-6f36-4752-9f97-75d62282d276,Year 2 Sem 1,ad6c1875-ed41-4a50-8bc7-1db472772da8,Database Programming ,INFO 2103 ,3,false
+76ffac30-6f36-4752-9f97-75d62282d276,Year 2 Sem 1,2fd3c2c8-db5d-4309-99c3-ca8b7e42d7e9,Multimedia Technology,INFO 2201 ,3,false
+76ffac30-6f36-4752-9f97-75d62282d276,Year 2 Sem 1,0a0b2cb5-8035-4cde-b4b9-4db4e7ba14ef,Ethics and Fiqh for Contemporary Issues ,UNGS 2080 ,2,false
+76ffac30-6f36-4752-9f97-75d62282d276,Year 2 Sem 1,e22238a5-da9c-4447-9f4d-a256e46c6301,System Analysis and Design ,INFO 2401,3,false
+76ffac30-6f36-4752-9f97-75d62282d276,Year 2 Sem 1,04b1a0ae-be52-457b-b240-e5a549ea8e02,Principles of IT Security,CSC 2602 ,3,false
+76ffac30-6f36-4752-9f97-75d62282d276,Year 2 Sem 1,3d90d6d0-1547-4202-a075-897758805de8,Elementary Quranic Language I ,LQ 1008 ,0.5,false
+76ffac30-6f36-4752-9f97-75d62282d276,Year 2 Sem 1,8020fa7a-5521-4ab9-9ccf-aa4590a0d4ef,Leadership I ,CC 2XXX ,0.5,false
+9ed8b9c5-956f-4034-b319-6b88bf3003f7,Year 2 Sem 2,59034c6e-5fb9-4869-a1fb-f2dcb08088fd,Data Structure and Algorithms I ,CSC 2104 ,3,false
+9ed8b9c5-956f-4034-b319-6b88bf3003f7,Year 2 Sem 2,d36e7d20-7b8d-49b9-8f23-4d140072c093,Computer Networking,CSC 2201,3,false
+9ed8b9c5-956f-4034-b319-6b88bf3003f7,Year 2 Sem 2,db39d829-0b4e-49ac-a8d2-5e2f1ddd647d,Management Information Systems ,INFO 2501 ,3,false
+9ed8b9c5-956f-4034-b319-6b88bf3003f7,Year 2 Sem 2,be2f2df2-9274-41ea-aa4e-857be6602971,Human Computer Interaction ,INFO 3401 ,3,false
+9ed8b9c5-956f-4034-b319-6b88bf3003f7,Year 2 Sem 2,b1c7c450-b6e3-40ba-b3ba-d5a193c690f5,Operating System ,CSC 3401 ,3,false
+9ed8b9c5-956f-4034-b319-6b88bf3003f7,Year 2 Sem 2,448e8494-9a09-420d-8f42-9cd9c85b9031,English for Academic Writing,LE 4000,3,false
+9ed8b9c5-956f-4034-b319-6b88bf3003f7,Year 2 Sem 2,a1604975-4ac1-433e-8397-e96ea65c9b1a,Elementary Quranic Language II ,LQ 2008 ,0.5,false
+9ed8b9c5-956f-4034-b319-6b88bf3003f7,Year 2 Sem 2,cba644f3-20d3-4202-a97f-99ee49ddea05,Leadership II ,CC 2XXX ,0.5,false
+793a9267-19aa-4fd9-b96c-77e37c083ecf,Year 3 Sem 1,260c4f31-d910-4664-9859-26386e326a05,Web Application Development,INFO 3305,3,false
+793a9267-19aa-4fd9-b96c-77e37c083ecf,Year 3 Sem 1,0162f727-3cdd-4fab-8193-e30d7f8ac3b7,E-Commerce ,INFO 3304 ,3,false
+793a9267-19aa-4fd9-b96c-77e37c083ecf,Year 3 Sem 1,9739d6c7-2b14-4a57-a2f7-461fd0b2f296,Project Management in IT ,INFO 3501 ,3,false
+793a9267-19aa-4fd9-b96c-77e37c083ecf,Year 3 Sem 1,6935c295-feb2-42fb-b050-46b67915c619,The Islamic Worldview and Civilization ,UNGS 2090 ,2,false
+793a9267-19aa-4fd9-b96c-77e37c083ecf,Year 3 Sem 1,a5cdc4cd-dcf3-418d-88a8-f59cdd2a7548,Specialization I ,INFO XXXX ,3,false
+793a9267-19aa-4fd9-b96c-77e37c083ecf,Year 3 Sem 1,06ce5454-94f0-47f0-bf44-73ab8d9bea9d,Specialization II ,INFO XXXX ,3,false
+793a9267-19aa-4fd9-b96c-77e37c083ecf,Year 3 Sem 1,fdd63421-1eb0-4b3f-be81-2c2cbef64862,Skill I ,CC 3XXX ,0.5,false
+793a9267-19aa-4fd9-b96c-77e37c083ecf,Year 3 Sem 1,74ce8c93-a5e6-4b58-bad6-108ceb25b4d4,USRAH 3 ,CCCD 1621 ,1,false
+290bb78a-a218-4034-b354-ce4413d458b9,Year 3 Sem 2,d3d016a0-8fbe-420c-a7d3-41d1fb379e0f,Technopreneurship ,INFO 4504,3,false
+290bb78a-a218-4034-b354-ce4413d458b9,Year 3 Sem 2,61aebf02-b3c8-48e0-a7a3-459c62fb9873,ICT & Islam ,INFO 4501 ,3,false
+290bb78a-a218-4034-b354-ce4413d458b9,Year 3 Sem 2,57e58ebc-1e0f-4d67-8639-a11b62493141,Specialization III ,INFO XXXX,3,false
+290bb78a-a218-4034-b354-ce4413d458b9,Year 3 Sem 2,45fbe25d-4c5e-4ba7-9579-54a25e818b8c,Specialization IV,INFO XXXX,3,false
+290bb78a-a218-4034-b354-ce4413d458b9,Year 3 Sem 2,e0f5eeef-d39d-4ac2-9811-3b8998f3ffbb,Specialization V ,INFO XXXX ,3,false
+290bb78a-a218-4034-b354-ce4413d458b9,Year 3 Sem 2,822afbcb-2a78-4ebe-90e2-727ce938c9df,FYP I ,INFO 4993 ,4,false
+290bb78a-a218-4034-b354-ce4413d458b9,Year 3 Sem 2,e218d964-ca7a-4595-967c-a1a03581adf6,Skill II ,CC 3XXX ,0.5,false
+88c29f7b-a19a-461e-888b-be06852d1737,Year 4 Sem 1,9b8e994f-e9ec-4fbe-b774-a43f8b61b8c1,Cyber Law and Ethics ,INFO 4502 ,3,false
+88c29f7b-a19a-461e-888b-be06852d1737,Year 4 Sem 1,30cbc470-417c-40ee-8c71-276b6846ce99,FYP II ,INFO 4994 ,4,false
+88c29f7b-a19a-461e-888b-be06852d1737,Year 4 Sem 1,9150d3e2-63c4-452b-b8f5-d9da79ed8573,Specialization VI ,CSC XXXX ,3,false
+88c29f7b-a19a-461e-888b-be06852d1737,Year 4 Sem 1,b63dde3b-8c98-4129-9bf6-b2a3b4b8055a,Specialization VII ,CSC XXXX ,3,false
+88c29f7b-a19a-461e-888b-be06852d1737,Year 4 Sem 1,597c4c28-ea9c-46a5-ade1-59b11193f0fa,2 USRAH 4 ,CCCD 1622 ,1,false
+4987ad47-52a7-415b-ae75-ad9d616d6f73,Year 4 Sem 2,624c4abc-de16-4f1f-bd59-995a1aa73def,Industrial Attachment ,INFO 4995  ,9,false

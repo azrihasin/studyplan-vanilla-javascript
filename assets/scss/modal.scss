@@ -1,0 +1,38 @@
+.modal {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+     &--hidden {
+      display: none;
+    }
+    &__contents {
+      background-color: #fff;
+      padding: 2rem 4rem;
+      input[type=email] {
+        width: 100%;
+        padding: .5rem;
+      }
+      #submit{
+        width: 100%;
+        padding: .5rem;
+        background-color: $primary;
+        color: #fff;
+        border: none;
+        transition: all .3s ease;
+        &:hover {
+          background-color: $primary-darker;
+        }
+      }
+    }
+    &__close-bar {
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: -2rem;
+      margin-top: -1rem;
+    }
+  }

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta
+        name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- STYLES CSS -->
+        <link
+        rel="stylesheet" href="assets/css/styles.css">
+        <link
+        rel="stylesheet" href="assets/css/progressive.css">
+
+        <!-- BOX ICONS CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+        <title>Study Plan</title>
+
+        <!-- MATERIAL DESIGN LITE CSS -->
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+        <!-- MATERIAL UI CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href=" https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+
+    </head>
+    <body id="body">
+        <div id="overlay"></div>
+        <div class="l-navbar" id="navbar">
+            <nav class="nav">
+                <div>
+                    <a href="#" class="nav__logo">
+                        <img src="assets/icons/logo.svg" alt="" class="nav__logo-icon">
+                        <span class="nav__logo-text">Bedimcode</span>
+                    </a>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="bx bx-chevron-right"></i>
+                    </div>
+                    <ul class="nav__list">
+                        <a href="#" class="nav__link active" onclick="openChooseModal()">
+                            <i class="bx bx-grid-alt nav__icon"></i>
+                            <span class="nav__text">
+                                Available
+                                <br>
+                                Study Plan
+                            </span>
+                        </a>
+
+                    </ul>
+                </div>
+                <a href="#" class="nav__link">
+                    <i class="bx bx-log-out-circle nav__icon"></i>
+                    <span class="nav__text">Close</span>
+                </a>
+            </nav>
+        </div>
+        <div class="headerArea" id="headerArea">
+            <button id="pin" onclick="toggle(this);" value="ON" style="background: none;border:none;outline:0;float:right;margin:1em">
+                <span class="material-icons">
+                    push_pin
+                </span>
+            </button>
+            <h1>Study Plan</h1>
+            <h6 id="calculateprogress">0/0</h6>
+            <div class="progress-bar">
+                <div id="progressbarid" class="progress-bar-grey" style="height:24px;width:0%"></div>
+            </div>
+
+            <label class="mdc-button mdc-button--raised" for="fileUpload">
+                <span class="mdc-button__ripple"></span>
+                <input type="file" id="fileUpload" style="display:none">
+                Upload Csv</label>
+
+
+            <button onclick="download_csv()" class="done mdc-button mdc-button--raised">
+                <span class="mdc-button__label">Download Csv</span>
+            </button>
+
+
+            <button onclick="resetStudyPlan()" class="mdc-button mdc-button--outlined">
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__label">Reset StudyPlan</span>
+            </button>
+        </div>
+
+
+        <!-- Modal for multiple add -->
+        <div
+            id="mulModal" class="mulmodal">
+            <!-- Modal content -->
+            <div class="mulmodal-content">
+                <div class="mulHeader">
+                    <span class="mulclose">&times;</span>
+                    <h6>Add Multiple Subject</h6>
+                </div>
+                <br>
+                <button onclick="muladdsubjectarea()" class="mdc-button mdc-button--raised">
+                    <span class="mdc-button__label">Add</span>
+                </button>
+                <button onclick="muldeletesubjectarea()" class="mdc-button mdc-button--raised">
+                    <span class="mdc-button__label">Delete</span>
+                </button>
+
+                <br>
+                <div id="mularea">
+                    <div>
+                        <input class="mul" type="text" name="" id="mulcoursecode" placeholder="Course code">
+                        <input class="mul" type="text" name="" id="mulcourse" placeholder="Course ">
+                        <input class="mul" type="text" name="" id="mulcredithour" placeholder="Credit Hour">
+                    </div>
+                </div>
+                <br>
+                <div style="float:right;margin-bottom:100px">
+                    <button onclick="muldone()" class="mdc-button mdc-button--raised">
+                        <span class="mdc-button__label">Done</span>
+                    </button>
+                    <button onclick="mulcancel()" class="cancel mdc-button">
+                        <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">Cancel</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal for avaialable studyplan -->
+        <div
+            id="chooseModal" class="chooseModal">
+            <!-- Modal content -->
+            <div class="chooseModal-content">
+                <span class="choosemodalclose">&times;</span>
+                <h3>Available study plan</h3>
+                <br>
+                <button id="uia_it">Information technology(UIA)</button>
+                <br>
+                <button id="uia_cs">Computer science(UIA)</button>
+            </div>
+        </div>
+
+
+        <div class="main" id="main">
+            <div class="cards" id="cards">
+                <div class="addtable" id="addtablearea" onclick="addSem()">
+                    <button id="addtable" class="addtablebutton">
+                        <span>Add Sem</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="fab">
+            <form class="cntt-wrapper">
+                <div id="fab-hdr">
+                    <h3>Add Subject</h3>
+                </div>
+                <div class="cntt">
+                    <label class="mdc-text-field mdc-text-field--outlined" id="coursecode">
+                        <span class="mdc-notched-outline">
+                            <span class="mdc-notched-outline__leading"></span>
+                            <span class="mdc-notched-outline__notch">
+                                <span class="mdc-floating-label" id="my-label-id">Course code</span>
+                            </span>
+                            <span class="mdc-notched-outline__trailing"></span>
+                        </span>
+                        <input id="coursecodeinput" type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                    </label>
+                    <div class="mdc-text-field-helper-line">
+                        <div class="mdc-text-field-helper-text" id="my-helper-id" aria-hidden="true">Course code</div>
+                    </div>
+                    <label class="mdc-text-field mdc-text-field--outlined" id="coursename">
+                        <span class="mdc-notched-outline">
+                            <span class="mdc-notched-outline__leading"></span>
+                            <span class="mdc-notched-outline__notch">
+                                <span class="mdc-floating-label" id="my-label-id">Course Name</span>
+                            </span>
+                            <span class="mdc-notched-outline__trailing"></span>
+                        </span>
+                        <input id="coursenameinput" type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                    </label>
+                    <div class="mdc-text-field-helper-line">
+                        <div class="mdc-text-field-helper-text" id="my-helper-id" aria-hidden="true">Course name</div>
+                    </div>
+                    <div class="option-group">
+                        <select id="semoption" name="cars">
+                            <option>Choose sem</option>
+                        </select>
+                    </div>
+                    <br>
+                    <label class="mdc-text-field mdc-text-field--outlined" id="credithour">
+                        <span class="mdc-notched-outline">
+                            <span class="mdc-notched-outline__leading"></span>
+                            <span class="mdc-notched-outline__notch">
+                                <span class="mdc-floating-label" id="my-label-id">Credit Hour</span>
+                            </span>
+                            <span class="mdc-notched-outline__trailing"></span>
+                        </span>
+                        <input id="credithourinput" type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                    </label>
+                    <div class="mdc-text-field-helper-line">
+                        <div class="mdc-text-field-helper-text" id="my-helper-id" aria-hidden="true">Credit Hour</div>
+                    </div>
+                </form>
+                <div style="float:right;">
+                    <button id="donefabbutton" class="done mdc-button mdc-button--raised" onclick="getValue()">
+                        <span class="mdc-button__label">Done</span>
+                    </button>
+                    <button class="cancel mdc-button">
+                        <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">Cancel</span>
+                    </button>
+                </div>
+            </div>
+            <script src="assets/js/script.js"></script>
+            <script src="assets/js/studyplan.js"></script>
+            <script>
+
+                function intializeSideBar() {
+
+                    var toggleId = 'nav-toggle';
+                    var navbarId = 'navbar';
+                    var bodyId = 'body';
+
+                    const toggle = document.getElementById(toggleId),
+                        navbar = document.getElementById(navbarId),
+                        bodypadding = document.getElementById(bodyId)
+
+                    navbar.classList.toggle('show')
+                    // ROTATE TOGGLE
+                    toggle.classList.toggle('rotate')
+                    // PADDING BODY
+                    bodypadding.classList.toggle('expander')
+                }
+
+                intializeSideBar();
+
+
+                [].forEach.call(document.querySelectorAll('.mdc-text-field'), function (el) {
+                    mdc.textField.MDCTextField.attachTo(el);
+                });
+
+
+
+            
+
+                // cookies
+
+                /*$(document).ready(function () {
+                    var valueCookies = getCookiesAll();
+                    console.log(valueCookies);
+
+                    console.log(typeof(valueCookies));
+
+                    if (valueCookies == null) {
+                        console.log("No cookies");
+                    } else {
+
+                        sem = [];
+                        subject = [];
+
+                        var keys = Object.keys(valueCookies);
+
+                        for (var i = 0, len = keys.length; i < len; i++) {
+                            console.log(valueCookies[keys[i]]);
+                            var name = "table" + i;
+                            console.log("Table name : " + name);
+                            doSomething(name);
+
+                        }
+
+                        console.log(window.subject);
+
+                        var getCsv = cookieCsv(window.subject);
+
+                        createTableByUrl(getCsv);
+
+                        cookieProgressBar();
+                    }
+                });
+
+                   function cookieProgressBar() {
+
+                    console.log("get thorugh progress bar");
+
+
+                    //set checkbox to true every sem
+
+                    for (var i = 0; i < window.subject.length; i++) {
+
+                        var dontTick = "true" ;
+
+                        var value = "checkboxall_" + window.subject[i][0].sem_id ;
+
+                        for (var j = 0; j < window.subject[i].length; j++) {                           
+
+                            
+
+                            if (window.subject[i][j].taken == "false") {
+
+                                console.log("this subject flase "+window.subject[i][j].course);
+                                dontTick = "false"; 
+        
+                            }
+                        }
+
+                        console.log("Dont tick value "+ dontTick);
+
+                        if(dontTick == "false"){
+                            console.log("this table flase "+window.subject[i][0].sem_name);
+                            document.getElementById(value).checked = false;
+                        }else if(dontTick == "true" ){
+                            console.log("this table true "+window.subject[i][0].sem_name);
+                            document.getElementById(value).checked = true;
+                        }                  
+
+
+                    }
+
+
+                    //set checkbox to true every subject
+
+                    for (var i = 0; i < window.subject.length; i++) {
+
+                        for (var j = 0; j < window.subject[i].length; j++) {
+
+                            var value = "check_" + window.subject[i][j].sem_id + "_" + window.subject[i][j].course_id;
+
+                            if (window.subject[i][j].taken == "true") {
+                                document.getElementById(value).checked = true;
+
+                                var table = document.getElementById("table" + window.subject[i][j].sem_id);
+
+                                var content = table.getElementsByTagName("tbody")[0];
+
+                                for (var x = 0; x < content.rows.length; x++) {
+                                    if (x == j) {
+                                        content.rows[x].style.backgroundColor = "#dddddd";
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                function doSomething(name) {
+
+                    var myCookie = getCookie(name);
+
+                    // do cookie exists stuff
+                    var arr = JSON.parse(myCookie);
+
+                    if (window.subject.length == 0) {
+                        window.subject[0] = [];
+                    } else {
+                        window.subject.push([]);
+                    }
+
+                    // push to array
+                    window.subject.push(arr);
+                    console.log(arr);
+                }
+
+                function cookieCsv(cookievalue) {
+                    var data = [];
+
+                    var rowcount = 0;
+
+                    
+
+                    for (i = 0; i < window.subject.length; i ++) {
+                        for (j = 0; j < window.subject[i].length; j ++) {
+                            data.push([]);
+
+                            data[rowcount].push([
+                                cookievalue[i][j].sem_id,
+                                cookievalue[i][j].sem_name,
+                                cookievalue[i][j].course_id,
+                                cookievalue[i][j].course,
+                                cookievalue[i][j].course_code,
+                                cookievalue[i][j].credit_hour,
+                                cookievalue[i][j].taken,
+                            ]);
+
+                            rowcount = rowcount + 1;
+                        }
+                    }
+
+                    console.log("Debug cookie"+data);
+
+                    var csv = "sem_id,sem_name,course_id,course,course_code,credit_hour,taken\n";
+                    data.forEach(function (row) {
+                        csv += row.join(",");
+                        csv += "\n";
+                    });
+
+                    return csv;
+                }
+
+                function cookieManagement() {
+                    deleteAllCookies();
+                    
+                    for (var i = 0; i < window.subject.length; i++) {
+                        var json_str = JSON.stringify(window.subject[i]);
+                  
+                        createCookie("table" + i, json_str);
+                        console.log("size" + (
+                            roughObjSize = JSON.stringify(json_str).length
+                        ));
+                  
+                  
+                    }
+                  
+                    // Read cookie that have been created
+                    var valueCookies = getCookiesAll();
+                  
+                  console.log("Cookies Saved");
+                  }
+                  
+                  function deleteAllCookies() {
+                    var cookies = document.cookie.split(";");
+                    for (var i = 0; i < cookies.length; i++) {
+                        var cookie = cookies[i];
+                        var eqPos = cookie.indexOf("=");
+                        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                        document.cookie = name + '=;' +
+                            'expires=Thu, 01-Jan-1970 00:00:01 GMT;' +
+                            'path=' + '/;' +
+                            'domain=' + azrihasin.github.io + ';' +
+                            'secure=;';
+                    }
+                  }
+
+                function getCookiesAll() {
+                    console.log("Get through this function");
+                    var pairs = document.cookie.split(";");
+                    var cookies = {};
+                    for (var i = 0; i < pairs.length; i++) {
+                        var pair = pairs[i].split("=");
+                        cookies[(pair[0] + '').trim()] = unescape(pair.slice(1).join('='));
+                    }
+                    return cookies;
+                }
+
+                function createCookie(name, value) {
+                    var expires;
+                    var days = true;
+                    if (days) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
+                        expires = "; expires=" + date.toGMTString();
+                    } else {
+                        expires = "";
+                    }
+                    document.cookie = name + "=" + value + expires + "; path=/";
+                }
+
+                function getCookie(c_name) {
+                    if (document.cookie.length > 0) {
+                        c_start = document.cookie.indexOf(c_name + "=");
+                        if (c_start != -1) {
+                            c_start = c_start + c_name.length + 1;
+                            c_end = document.cookie.indexOf(";", c_start);
+                            if (c_end == -1) {
+                                c_end = document.cookie.length;
+                            }
+                            return unescape(document.cookie.substring(c_start, c_end));
+                        }
+                    }
+                    return "";
+                }*/
+            </script>
+        </body>
+        <!-- MAIN JS -->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
